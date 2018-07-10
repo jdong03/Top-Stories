@@ -25,6 +25,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Gjd-dy-AgE" kind="show" id="F11-1d-7Ei"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,7 +35,13 @@
                             <outlet property="delegate" destination="qsg-Wa-PYR" id="oMW-yS-6jL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="scy-eT-uqe"/>
+                    <navigationItem key="navigationItem" id="scy-eT-uqe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="XMb-wf-QqB">
+                            <connections>
+                                <action selector="onTappedDoneButton:" destination="qsg-Wa-PYR" id="j2H-ME-vu6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weD-ez-deG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,6 +64,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPv-I9-eLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="69.599999999999994" y="135.38230884557723"/>
+        </scene>
+        <!--Articles View Controller-->
+        <scene sceneID="4QY-Jg-XXe">
+            <objects>
+                <tableViewController id="Gjd-dy-AgE" customClass="ArticlesViewController" customModule="Top_Stories" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Jo-nD-eTA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="VzM-eY-COi">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VzM-eY-COi" id="EQM-yg-ylU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Gjd-dy-AgE" id="pC2-Oe-FtE"/>
+                            <outlet property="delegate" destination="Gjd-dy-AgE" id="38i-5s-z6K"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="CWU-86-CWs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6Q-2r-a4Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="135"/>
         </scene>
     </scenes>
 </document>
